@@ -1,13 +1,19 @@
-name: 'employee_transform'
+
+name: 'fivetran_transformations'
 version: '1.0.0'
-profile: 'employee_transform'
+config-version: 2
+
+profile: 'fivetran_transformations'
 
 model-paths: ["models"]
 test-paths: ["tests"]
 target-path: "target"
-clean-targets: ["target", "dbt_packages"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
 
 models:
-  employee_transform:
+  fivetran_transformations:
     staging:
-      +materialized: view
+      +materialized: table
