@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_employees
+    description: Employees from the SFTP file, with names in lower case.
+    columns:
+      - name: employee_id
+        data_tests: [unique, not_null]
+      - name: employee_name
+        data_tests: [not_null]

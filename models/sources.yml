@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: employee_source
+    database: SNOWFLAKE_LEARNING_DB
+    schema: WIT_DEFAULT_SFTP_DEPARTMENT
+
+    tables:
+      - name: UPLOAD_EMPLOYEE_SALARY

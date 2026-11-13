@@ -1,0 +1,13 @@
+name: 'employee_transform'
+version: '1.0.0'
+profile: 'employee_transform'
+
+model-paths: ["models"]
+test-paths: ["tests"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  employee_transform:
+    staging:
+      +materialized: view
